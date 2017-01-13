@@ -54,3 +54,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'omniauth', '~> 1.3.1'
 gem 'omniauth-google-oauth2'
+gem 'google_plus'
