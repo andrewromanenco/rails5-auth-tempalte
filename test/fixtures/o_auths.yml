@@ -1,0 +1,3 @@
+o_google_user:
+  remote_id: google_remote_id
+  user: google_user
