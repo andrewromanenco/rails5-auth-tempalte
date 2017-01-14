@@ -1,4 +1,6 @@
 Landing page<br/>
 Is logged in: <%= is_user_logged_in? %><br/>
+Id: <%= is_user_logged_in? ? @user.id : 'Nope' %><br/>
 Name: <%= is_user_logged_in? ? @user.full_name : 'Nope' %><br/>
-Auth: <%= link_to "Authenticate with Google!", '/auth/google_oauth2' %>
+Auth: <%= link_to "Authenticate with Google!", '/auth/google_oauth2' %><br/>
+<%= link_to "Logout", session_logout_url %>

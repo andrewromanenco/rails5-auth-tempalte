@@ -24,4 +24,10 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_url
     assert session[:current_user_id]
   end
+
+  test "logout clears the session" do
+    ActionDispatch::Request::Session.any_instance.expects(:delete).with(:current_user_id).at_least_once
+    get session_logout_url
+    assert_redirected_to root_url
+  end
 end

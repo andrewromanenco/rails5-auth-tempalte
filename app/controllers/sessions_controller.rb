@@ -8,4 +8,9 @@ class SessionsController < ApplicationController
     session[:current_user_id] = user.id
     redirect_to root_url
   end
+
+  def logout
+    session.delete(:current_user_id)
+    redirect_to root_url
+  end
 end
